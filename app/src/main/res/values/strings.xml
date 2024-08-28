@@ -3,6 +3,8 @@
     <string name="textview_main_integrantes_gr1">Ayala Gastón, Díaz Juan Pablo, Encinas William Iván, Orellano Esteban Joselo, Silva Carlos Andrés</string>
     <!-- Labels -->
     <string name="label_main">EjercicioControles - Grupo 1</string>
+    <string name="label_formulario1">EjercicioControles</string>
+    <string name="label_contactos">Contactos</string>
     <!-- Opciones menu -->
     <string name="agregar_contactos">Agregar contactos</string>
     <string name="listado_de_contactos">Listado de contactos</string>
