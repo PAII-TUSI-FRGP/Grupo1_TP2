@@ -8,4 +8,26 @@
     <!-- Opciones menu -->
     <string name="agregar_contactos">Agregar contactos</string>
     <string name="listado_de_contactos">Listado de contactos</string>
+
+
+    <!--GA strings de formulario contacto -->
+    <string name="headerFormulario">FORMULARIO DE CONTACTO</string>
+    <string name="textoFromulario">Este es un formulario destinado al registro de personas, sus datos personales e intereses</string>
+    <string name="tituloNombre" >NOMBRE</string>
+    <string name="tituloApellido" >APELLIDO</string>
+    <string name="tituloTelefono" >TELÉFONO</string>
+    <string name="tituloEmail" >EMAIL</string>
+    <string name="tituloDireccion" >DIRECCIÓN</string>
+    <string name="tituloFechaNac" >FECHA DE NACIMIENTO</string>
+    <string name="hintNombre">Nombre</string>
+    <string name="hintApellido">Apellido</string>
+    <string name="hintTelefono">Telefono</string>
+    <string name="hintEmail">Email</string>
+    <string name="hintDireccion">Direccion</string>
+    <string name="hintFechaNac">Fecha nacimiento</string>
+
+    <string name="btnContinuar">CONTINUAR</string>
+
+
+
 </resources>

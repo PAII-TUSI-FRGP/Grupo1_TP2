@@ -17,7 +17,7 @@
             android:exported="false"
             android:label="@string/label_contactos"/>
         <activity
-            android:name=".Formulario1Activity"
+            android:name=".FormularioAgregarContacto"
             android:exported="false"
             android:label="@string/label_formulario1" />
         <activity

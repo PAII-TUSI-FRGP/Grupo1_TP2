@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -13,18 +15,28 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Formulario1Activity extends AppCompatActivity {
+public class FormularioAgregarContacto extends AppCompatActivity {
+
+    Spinner spinTelefono, spinEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_formulario1);
+        setContentView(R.layout.activity_agregar_contacto);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        //GA cargo los spinners
+        spinTelefono= (Spinner)findViewById(R.id.spinnerTelefono);
+        spinEmail=(Spinner)findViewById(R.id.spinnerEmail);
+        String[] opciones = {"Casa", "Trabajo", "Movil"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,opciones);
+        spinTelefono.setAdapter(adapter);
+        spinEmail.setAdapter(adapter);
     }
 
     @Override
@@ -37,7 +49,7 @@ public class Formulario1Activity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(item.getItemId() == R.id.opcion1Agregar){
             Toast.makeText(this, "Agregar contactos", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(this, Formulario1Activity.class));
+            startActivity(new Intent(this, FormularioAgregarContacto.class));
         }
 
         if(item.getItemId() == R.id.opcion2Listar){
