@@ -37,7 +37,7 @@ public class ContactosActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(item.getItemId() == R.id.opcion1Agregar){
             Toast.makeText(this, "Agregar contactos", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(this, Formulario1Activity.class));
+            startActivity(new Intent(this, FormularioAgregarContacto.class));
         }
 
         if(item.getItemId() == R.id.opcion2Listar){
