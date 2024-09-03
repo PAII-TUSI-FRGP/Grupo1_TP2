@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -58,5 +59,11 @@ public class FormularioAgregarContacto extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    //funcion navegar activity Ejercicio1Activity
+    public void gotoMasDatos(View view) {
+        Intent intent = new Intent(this, FrmMasDatosContacto.class);
+        startActivity(intent);
     }
 }

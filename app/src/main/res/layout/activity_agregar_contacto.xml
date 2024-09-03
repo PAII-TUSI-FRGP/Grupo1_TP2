@@ -165,6 +165,7 @@
                 android:id="@+id/button"
                 android:layout_width="181dp"
                 android:layout_height="wrap_content"
+                android:onClick="gotoMasDatos"
                 android:text="@string/btnContinuar" />
 
         </LinearLayout>
