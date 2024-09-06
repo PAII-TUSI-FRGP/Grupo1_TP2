@@ -19,7 +19,7 @@
     <string name="tituloEmail" >EMAIL</string>
     <string name="tituloDireccion" >DIRECCIÓN</string>
     <string name="tituloFechaNac" >FECHA DE NACIMIENTO</string>
-    <string name="hintNombre">Nombre</string>
+    <string name="hintNombre">Nombre PruebaImpactoBranch</string>
     <string name="hintApellido">Apellido</string>
     <string name="hintTelefono">Telefono</string>
     <string name="hintEmail">Email</string>
