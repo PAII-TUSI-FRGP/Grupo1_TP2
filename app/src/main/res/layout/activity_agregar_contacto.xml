@@ -7,59 +7,47 @@
     android:layout_height="match_parent"
     tools:context=".FormularioAgregarContacto">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="379dp"
-        android:layout_height="76dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.421"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="415dp"
-            android:layout_height="wrap_content"
-            android:text="@string/headerFormulario"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/textoFromulario" />
-    </LinearLayout>
-
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="381dp"
-        android:layout_height="490dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="375dp"
+        android:layout_height="0dp"
         android:orientation="vertical"
         android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/headerFormulario"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textoFromulario" />
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="48dp"
                 android:text="@string/tituloNombre" />
 
             <EditText
                 android:id="@+id/editTextText"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:ems="10"
                 android:hint="@string/hintNombre"
                 android:inputType="text" />
@@ -73,7 +61,7 @@
             <EditText
                 android:id="@+id/editTextText3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:ems="10"
                 android:hint="@string/hintApellido"
                 android:inputType="text" />
@@ -92,7 +80,7 @@
                 <EditText
                     android:id="@+id/editTextText5"
                     android:layout_width="339dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="48dp"
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="@string/hintTelefono"
@@ -101,7 +89,7 @@
                 <Spinner
                     android:id="@+id/spinnerTelefono"
                     android:layout_width="246dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="48dp"
                     android:layout_weight="1" />
 
             </LinearLayout>
@@ -114,13 +102,13 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="46dp"
+                android:layout_height="48dp"
                 android:orientation="horizontal">
 
                 <EditText
                     android:id="@+id/editTextText4"
                     android:layout_width="477dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="@string/hintEmail"
@@ -129,7 +117,7 @@
                 <Spinner
                     android:id="@+id/spinnerEmail"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
                     android:layout_weight="1" />
             </LinearLayout>
 
@@ -142,7 +130,7 @@
             <EditText
                 android:id="@+id/editTextText2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:ems="10"
                 android:hint="@string/hintDireccion"
                 android:inputType="text" />
@@ -156,7 +144,7 @@
             <EditText
                 android:id="@+id/editTextDate"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:ems="10"
                 android:hint="@string/hintFechaNac"
                 android:inputType="date" />
