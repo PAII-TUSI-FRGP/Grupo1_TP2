@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -44,6 +45,49 @@ public class FormularioAgregarContacto extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
+    }
+
+    public void onClickContinuar (View view)
+    {
+        // Obtengo los valores de los campos de texto
+        String nombre = ((EditText) findViewById(R.id.editTextText)).getText().toString();
+        String apellido = ((EditText) findViewById(R.id.editTextText3)).getText().toString();
+        String telefono = ((EditText) findViewById(R.id.editTextText5)).getText().toString();
+        String email = ((EditText) findViewById(R.id.editTextText4)).getText().toString();
+        String fechaNacimiento = ((EditText) findViewById(R.id.editTextDate)).getText().toString();
+
+        // Se Valida que solo se cuente con letras en el text
+        if (!nombre.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+")) {
+            Toast.makeText(this, "El nombre no debe contener números", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        // Se Valida que solo se cuente con letras en el text
+        if (!apellido.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+")) {
+            Toast.makeText(this, "El apellido no debe contener números", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Se valida en Teléfono (Solo números, guiones permitidos y el simbolo + )
+        if (!telefono.matches("[0-9-+]+")) {
+            Toast.makeText(this, "El teléfono solo debe contener números y guiones", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Validar Email (Formato de email válido)
+        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            Toast.makeText(this, "Ingrese un email válido", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Validar Fecha de Nacimiento (Formato de DD-MM-YYYY)
+        if (!fechaNacimiento.matches("\\d{2}-\\d{2}-\\d{4}")) { // Formato esperado: yyyy-MM-dd
+            Toast.makeText(this, "Ingrese una fecha de nacimiento válida (Formato: DD-MM-YYYY)", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Mensaje para saber si todo salio bien
+        Toast.makeText(this, "Formulario validado con éxito", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, Formulario2Activity.class));
     }
 
     @Override
