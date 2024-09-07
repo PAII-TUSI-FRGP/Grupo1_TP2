@@ -28,5 +28,21 @@
 
     <string name="btnContinuar">CONTINUAR</string>
 
+    <!-- JP - strings del formulario Mas Datos -->
+    <string name="subtitFormularioMas">A continuación, por favor se pide  completar más datos personales</string>
+    <string name="masDatosNivelEstudios">NIVEL ESTUDIOS ALCANZADO</string>
+    <string name="masDatosIntereses">INTERESES</string>
+    <string name="btnGuardar">GUARDAR</string>
+    <string name="rdPrimIncompleto">Primario Incompleto</string>
+    <string name="rdPrimCompleto">Primario Completo</string>
+    <string name="rdSecuIncompleto">Secundario Incompleto</string>
+    <string name="rdSecuCompleto">Secundario Completo</string>
+    <string name="rdOtros">Otros</string>
+    <string name="chkDeporte">Deporte</string>
+    <string name="chkMusica">Música</string>
+    <string name="chkArte">Arte</string>
+    <string name="chkTecno">Tecnología</string>
+    <string name="deseoRecibir">¿DESEA RECIBIR INFORMACION?</string>
+    <string name="quieroMas">Sí</string>
 
 </resources>

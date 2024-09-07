@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".masData">
+
+    <ScrollView
+        android:id="@+id/svMasDatos"
+        android:layout_width="375dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvFrmMasDatTitulo"
+                android:layout_width="339dp"
+                android:layout_height="match_parent"
+                android:text="@string/headerFormulario"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tvFrmMasDatSubtit"
+                android:layout_width="385dp"
+                android:layout_height="wrap_content"
+                android:text="@string/subtitFormularioMas" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardViewRadios"
+                android:layout_width="353dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp">
+
+                <RadioGroup
+                    android:id="@+id/rgEstudios"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvNivelEstudios"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/masDatosNivelEstudios" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rdPrimIncompleto" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rdPrimCompleto" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rdSecuIncompleto" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rdSecuCompleto" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rdOtros" />
+                </RadioGroup>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tvIntereses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/masDatosIntereses" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardViewChecks"
+                android:layout_width="353dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp">
+
+                <CheckBox
+                    android:id="@+id/chkDeporte"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="50dp"
+                    android:text="@string/chkDeporte" />
+
+                <CheckBox
+                    android:id="@+id/chkArte"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="150dp"
+                    android:text="@string/chkArte" />
+
+                <CheckBox
+                    android:id="@+id/chkMusica"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="50dp"
+                    android:text="@string/chkMusica" />
+
+                <CheckBox
+                    android:id="@+id/chkTecno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="150dp"
+                    android:text="@string/chkTecno" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtDeseaMas"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:paddingRight="16dp"
+                    android:text="@string/deseoRecibir"
+                    android:textSize="14dp" />
+
+                <Switch
+                    android:id="@+id/swQuieroMas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="52dp"
+
+                    android:text="@string/quieroMas" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnGuardar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="gotoMain"
+                android:text="@string/btnGuardar" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
