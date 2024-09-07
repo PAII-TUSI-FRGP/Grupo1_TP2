@@ -8,9 +8,11 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tv_integrantes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:gravity="center"
+        android:text="@string/textview_main_integrantes_gr1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
