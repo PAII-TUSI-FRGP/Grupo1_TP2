@@ -13,6 +13,10 @@
         android:theme="@style/Theme.Grupo1_TP2"
         tools:targetApi="31">
         <activity
+            android:name=".masData"
+            android:label="@string/label_formulario1"
+            android:exported="false" />
+        <activity
             android:name=".Formulario2Activity"
             android:exported="false" />
         <activity

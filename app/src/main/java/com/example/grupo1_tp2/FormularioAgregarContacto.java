@@ -107,7 +107,7 @@ public class FormularioAgregarContacto extends AppCompatActivity {
 
     //funcion navegar activity Ejercicio1Activity
     public void gotoMasDatos(View view) {
-        Intent intent = new Intent(this, FrmMasDatosContacto.class);
+        Intent intent = new Intent(this, masData.class);
         startActivity(intent);
     }
 }
