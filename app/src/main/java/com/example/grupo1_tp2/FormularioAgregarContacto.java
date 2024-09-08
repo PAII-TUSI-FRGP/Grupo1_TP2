@@ -21,6 +21,9 @@ public class FormularioAgregarContacto extends AppCompatActivity {
 
     Spinner spinTelefono, spinEmail;
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +42,9 @@ public class FormularioAgregarContacto extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,opciones);
         spinTelefono.setAdapter(adapter);
         spinEmail.setAdapter(adapter);
+
+
+
     }
 
     @Override
@@ -55,6 +61,7 @@ public class FormularioAgregarContacto extends AppCompatActivity {
         String telefono = ((EditText) findViewById(R.id.editTextText5)).getText().toString();
         String email = ((EditText) findViewById(R.id.editTextText4)).getText().toString();
         String fechaNacimiento = ((EditText) findViewById(R.id.editTextDate)).getText().toString();
+
 
         // Se Valida que solo se cuente con letras en el text
         if (!nombre.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+")) {
@@ -87,14 +94,22 @@ public class FormularioAgregarContacto extends AppCompatActivity {
 
         // Mensaje para saber si todo salio bien
         Toast.makeText(this, "Formulario validado con éxito", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(this, Formulario2Activity.class));
+
+        Intent intent= new Intent(this, Formulario2Activity.class);
+        getIntent().putExtra("nombre", nombre);
+        getIntent().putExtra("apellido", apellido);
+        getIntent().putExtra("telefono", telefono);
+        getIntent().putExtra("email", email);
+        getIntent().putExtra("fechaNacimiento", fechaNacimiento);
+
+        startActivity(intent);
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(item.getItemId() == R.id.opcion1Agregar){
             Toast.makeText(this, "Agregar contactos", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(this, FormularioAgregarContacto.class));
+            new Intent(this, FormularioAgregarContacto.class);
         }
 
         if(item.getItemId() == R.id.opcion2Listar){

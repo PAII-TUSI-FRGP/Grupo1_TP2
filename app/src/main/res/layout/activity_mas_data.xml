@@ -161,7 +161,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="gotoMain"
+                android:onClick="guardar"
                 android:text="@string/btnGuardar" />
 
         </LinearLayout>

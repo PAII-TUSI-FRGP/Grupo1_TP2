@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -13,7 +15,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 public class ContactosActivity extends AppCompatActivity {
+
+    private TextView tvContactos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +32,47 @@ public class ContactosActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        tvContactos = (TextView) findViewById(R.id.listadoContatos);
+        String archvivoContactos[] = fileList();
+        if (archivoExist(archvivoContactos, "contactos.txt")) {
+            try {
+                InputStreamReader archivo = new InputStreamReader(openFileInput("contactos.txt"));
+                BufferedReader br = new BufferedReader(archivo);
+                String linea = br.readLine();
+                String agendaCompleta = "";
+
+                while (linea != null) {
+                    agendaCompleta = agendaCompleta + linea + "\n";
+                    linea = br.readLine();
+
+                }
+                br.close();
+                archivo.close();
+                tvContactos.setText(agendaCompleta);
+
+            } catch (Exception e) {
+            }
+
+        }
+
+
+
+
+
+
+    }
+
+    private boolean archivoExist(String[] archivoContactos, String nombreArchivo) {
+
+        for (int i=0; i<archivoContactos.length; i++){
+
+            if (nombreArchivo.equals(archivoContactos[i])){
+                return true;
+
+            }
+        }
+        return false;
     }
 
     @Override
