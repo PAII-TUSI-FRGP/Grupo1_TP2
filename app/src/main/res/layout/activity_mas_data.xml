@@ -55,31 +55,31 @@
                         android:text="@string/masDatosNivelEstudios" />
 
                     <RadioButton
-                        android:id="@+id/radioButton5"
+                        android:id="@+id/rb_primario_incompleto"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/rdPrimIncompleto" />
 
                     <RadioButton
-                        android:id="@+id/radioButton4"
+                        android:id="@+id/rb_primario_completo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/rdPrimCompleto" />
 
                     <RadioButton
-                        android:id="@+id/radioButton"
+                        android:id="@+id/rb_secundario_incompleto"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/rdSecuIncompleto" />
 
                     <RadioButton
-                        android:id="@+id/radioButton2"
+                        android:id="@+id/rb_secundario_completo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/rdSecuCompleto" />
 
                     <RadioButton
-                        android:id="@+id/radioButton3"
+                        android:id="@+id/rb_otros"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/rdOtros" />
@@ -99,7 +99,7 @@
                 app:cardCornerRadius="8dp">
 
                 <CheckBox
-                    android:id="@+id/chkDeporte"
+                    android:id="@+id/cb_deporte"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
@@ -107,7 +107,7 @@
                     android:text="@string/chkDeporte" />
 
                 <CheckBox
-                    android:id="@+id/chkArte"
+                    android:id="@+id/cb_arte"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
@@ -115,7 +115,7 @@
                     android:text="@string/chkArte" />
 
                 <CheckBox
-                    android:id="@+id/chkMusica"
+                    android:id="@+id/cb_musica"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="200dp"
@@ -123,7 +123,7 @@
                     android:text="@string/chkMusica" />
 
                 <CheckBox
-                    android:id="@+id/chkTecno"
+                    android:id="@+id/cb_tecnologia"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="200dp"
@@ -148,7 +148,7 @@
                     android:textSize="14dp" />
 
                 <Switch
-                    android:id="@+id/swQuieroMas"
+                    android:id="@+id/sw_notificaciones"
                     android:layout_width="wrap_content"
                     android:layout_height="52dp"
 
