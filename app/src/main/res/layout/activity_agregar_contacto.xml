@@ -147,13 +147,13 @@
                 android:layout_height="48dp"
                 android:ems="10"
                 android:hint="@string/hintFechaNac"
-                android:inputType="date" />
+                android:inputType="text" />
 
             <Button
                 android:id="@+id/button"
                 android:layout_width="181dp"
                 android:layout_height="wrap_content"
-                android:onClick="gotoMasDatos"
+                android:onClick="onClickContinuar"
                 android:text="@string/btnContinuar" />
 
         </LinearLayout>

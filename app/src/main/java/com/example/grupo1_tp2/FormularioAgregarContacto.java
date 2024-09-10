@@ -2,6 +2,7 @@ package com.example.grupo1_tp2;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,6 +17,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.example.grupo1_tp2.entidad.Contacto;
 
 public class FormularioAgregarContacto extends AppCompatActivity {
 
@@ -54,6 +57,7 @@ public class FormularioAgregarContacto extends AppCompatActivity {
         String apellido = ((EditText) findViewById(R.id.editTextText3)).getText().toString();
         String telefono = ((EditText) findViewById(R.id.editTextText5)).getText().toString();
         String email = ((EditText) findViewById(R.id.editTextText4)).getText().toString();
+        String direccion = ((EditText)findViewById(R.id.editTextText2)).getText().toString();
         String fechaNacimiento = ((EditText) findViewById(R.id.editTextDate)).getText().toString();
 
         // Se Valida que solo se cuente con letras en el text
@@ -87,7 +91,25 @@ public class FormularioAgregarContacto extends AppCompatActivity {
 
         // Mensaje para saber si todo salio bien
         Toast.makeText(this, "Formulario validado con éxito", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(this, Formulario2Activity.class));
+
+        Contacto contacto = new Contacto();
+        contacto.setNombre(nombre);
+        contacto.setApellido(apellido);
+        contacto.setTelefono(telefono);
+        contacto.setEmail(email);
+        contacto.setDireccion(direccion);
+        contacto.setFechaDeNacimiento(fechaNacimiento);
+        Log.d("contacto", contacto.toString());
+
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("contacto", contacto);
+        Intent intent = new Intent(this, masData.class);
+        intent.putExtras(bundle);
+        startActivity(intent);
+
+        //startActivity(new Intent(this, Formulario2Activity.class));
+        //Intent intent = new Intent(this, masData.class);
+        //startActivity(intent);
     }
 
     @Override
